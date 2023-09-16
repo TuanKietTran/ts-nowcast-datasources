@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  ignite:
+    image: apacheignite/ignite:2.15.0-arm64
+    environment:
+      IGNITE_WORK_DIR: '/storage'
+    volumes:
+      - 'ignite-volume:/storage'
+    ports:
+      - '10800:10800'
+
+volumes:
+  ignite-volume:
